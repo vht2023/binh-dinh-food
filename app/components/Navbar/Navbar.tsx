@@ -37,15 +37,15 @@ const Navbar = () => {
 
 							<div className='flex sm:hidden flex-shrink-0 items-center border-right'>
 								<Image src='/images/Logo/Sea-Logo.svg' alt='Đặc sản Bình Định' width={36} height={36} />
-								<Link href='/' className='text-3xl font-bold text-black ml-4'>
-									77 Food
+								<Link href='/' className='text-2xl font-bold text-black ml-4'>
+									Hải Sản Phơi Khô
 								</Link>
 							</div>
 							<div className='hidden sm:flex flex-shrink-0 items-center border-right'>
 								<Image src='/images/Logo/Sea-Logo.svg' alt='Đặc sản Bình Định' width={64} height={64} />
-								<Link href='/' className='text-3xl font-bold text-black ml-4'>
+								<Link href='/' className='text-2xl font-bold text-black ml-4'>
 									{/* 77&apos;s Food */}
-									77 Food
+									Hải Sản Phơi Khô
 								</Link>
 							</div>
 
