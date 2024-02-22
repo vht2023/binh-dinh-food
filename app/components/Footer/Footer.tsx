@@ -59,7 +59,7 @@ const footer = () => {
 					<div className='flex flex-shrink-0 items-center border-right'>
 						<Image src='/images/Logo/Sea-Logo.svg' alt='logo' width={56} height={56} />
 						<Link href='/' className='text-2xl font-semibold text-black ml-4'>
-							Chef&apos;s Kitchen.
+							77 Food
 						</Link>
 					</div>
 					<h3 className='text-textbl text-xs font-medium mt-5 mb-4 lg:mb-16'>
@@ -99,10 +99,10 @@ const footer = () => {
 
 			<div className='py-10 md:flex items-center justify-between border-t border-t-bordertop'>
 				<h4 className='text-darkgrey text-sm text-center md:text-start font-normal'>
-					@2023 - Chef&apos;s kitchen. All Rights Reserved by{' '}
+					@2024 - 77 Food. All Rights Reserved by{' '}
 					<Link href='https://adminmart.com/' target='_blank'>
 						{' '}
-						Adminmart.com
+						TT
 					</Link>
 				</h4>
 				<div className='flex gap-5 mt-5 md:mt-0 justify-center md:justify-start'>
