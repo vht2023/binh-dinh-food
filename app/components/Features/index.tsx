@@ -51,18 +51,20 @@ const Features = () => {
 					</Fade>
 				</div>
 
-				<div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-5 mt-40'>
+				<div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-y-40 gap-x-5 mt-40'>
 					<Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
 						{cardData.map((item, i) => (
 							<div className='card-b p-8 relative rounded-3xl' key={i}>
-								<div className='work-img-bg rounded-full flex justify-center absolute top-[-50%] sm:top-[-40%] md:top-[-55%] lg:top-[-45%] left-[25%]'>
-									<Image
-										src={item.imgSrc}
-										alt={item.imgSrc}
-										width={160}
-										height={160}
-										className='rounded-full h-[160px] shadow-md'
-									/>
+								<div className='work-img-bg rounded-full flex justify-center absolute top-[-35%] w-full left-0'>
+									<div>
+										<Image
+											src={item.imgSrc}
+											alt={item.imgSrc}
+											width={160}
+											height={160}
+											className='rounded-full h-[160px] shadow-md'
+										/>
+									</div>
 								</div>
 								<h3 className='text-2xl text-black font-semibold text-center mt-16'>{item.heading}</h3>
 								<p className='text-lg font-normal text-black text-center text-opacity-50 mt-2'>{item.subheading}</p>

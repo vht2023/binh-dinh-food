@@ -6,7 +6,7 @@ const Details = () => {
 	return (
 		<div id='kho-muc'>
 			<div className='relative' id='kho-muc'>
-				<div className='mx-auto max-w-7xl lg:pt-10 sm:pb-24 px-6'>
+				<div className='mx-auto max-w-7xl lg:pt-10 pb-24 px-6'>
 					{/* <div className='absolute right-0 bottom-[-18%] hidden lg:block'>
 						<Image src={'/images/Details/burger.png'} alt='burger-image' width={463} height={622} />
 					</div> */}
@@ -17,7 +17,7 @@ const Details = () => {
 
 						<div className='col-span-6 flex flex-col justify-center'>
 							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
-								<h2 className='text-pink text-lg font-bold mb-3 ls-51 uppercase text-start'>KHÔ MỰC</h2>
+								<h2 className='text-pink text-lg font-bold mb-3 mt-3 ls-51 uppercase text-start'>KHÔ MỰC</h2>
 							</Fade>
 							<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
 								<h3 className='text-3xl lg:text-4xl font-semibold text-black text-start'>
@@ -67,14 +67,14 @@ const Details = () => {
 				</div>
 			</div>
 			<div className='relative' id='kho-ca-com'>
-				<div className='mx-auto max-w-7xl lg:pt-10 sm:pb-24 px-6'>
+				<div className='mx-auto max-w-7xl lg:pt-10 pb-24 px-6'>
 					{/* <div className='absolute right-0 bottom-[-18%] hidden lg:block'>
 						<Image src={'/images/Details/burger.png'} alt='burger-image' width={463} height={622} />
 					</div> */}
 					<div className='grid grid-cols-1 lg:grid-cols-12 space-x-5'>
 						<div className='col-span-6 flex flex-col justify-center'>
 							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
-								<h2 className='text-pink text-lg font-bold mb-3 ls-51 uppercase text-start'>KHÔ CÁ CƠM</h2>
+								<h2 className='text-pink text-lg font-bold mb-3 ls-51 uppercase text-start mt-3'>KHÔ CÁ CƠM</h2>
 							</Fade>
 							<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
 								<h3 className='text-3xl lg:text-4xl font-semibold text-black text-start'>
@@ -108,7 +108,7 @@ const Details = () => {
 								</div> */}
 							</Fade>
 						</div>
-						<div className='col-span-6 flex justify-start'>
+						<div className='col-span-6 flex justify-start mt-3'>
 							<Image
 								src='/images/Details/kho-ca-com-1.jpg'
 								alt='Khô cá cơm một nắng ngon'
@@ -121,18 +121,18 @@ const Details = () => {
 				</div>
 			</div>
 			<div className='relative' id='kho-ca-du'>
-				<div className='mx-auto max-w-7xl lg:pt-10 sm:pb-24 px-6'>
+				<div className='mx-auto max-w-7xl lg:pt-10 pb-24 px-6'>
 					{/* <div className='absolute right-0 bottom-[-18%] hidden lg:block'>
 						<Image src={'/images/Details/burger.png'} alt='burger-image' width={463} height={622} />
 					</div> */}
 					<div className='grid grid-cols-1 lg:grid-cols-12 space-x-5'>
-						<div className='col-span-6 flex justify-start'>
+						<div className='col-span-6 flex justify-start mt-6 md:mt-0'>
 							<Image src='/images/Details/kho-ca-du-1.jpg' alt='Khô cá đù 1 nắng ngon' width={636} height={808} />
 						</div>
 
 						<div className='col-span-6 flex flex-col justify-center'>
 							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
-								<h2 className='text-pink text-lg font-bold mb-3 ls-51 uppercase text-start'>KHÔ CÁ ĐÙ</h2>
+								<h2 className='text-pink text-lg font-bold mb-3 ls-51 uppercase text-start mt-3'>KHÔ CÁ ĐÙ</h2>
 							</Fade>
 							<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
 								<h3 className='text-3xl lg:text-4xl font-semibold text-black text-start'>
@@ -171,7 +171,7 @@ const Details = () => {
 				</div>
 			</div>
 			<div className='relative' id='tom-kho'>
-				<div className='mx-auto max-w-7xl lg:pt-10 sm:pb-24 px-6'>
+				<div className='mx-auto max-w-7xl lg:pt-10 pb-24 px-6'>
 					{/* <div className='absolute right-0 bottom-[-18%] hidden lg:block'>
 						<Image src={'/images/Details/burger.png'} alt='burger-image' width={463} height={622} />
 					</div> */}
@@ -208,7 +208,7 @@ const Details = () => {
 								</div> */}
 							</Fade>
 						</div>
-						<div className='col-span-6 flex justify-start'>
+						<div className='col-span-6 flex justify-start mt-3'>
 							<Image
 								src='/images/Details/tom-kho-1.jpg'
 								alt='Tôm khô ngon'
