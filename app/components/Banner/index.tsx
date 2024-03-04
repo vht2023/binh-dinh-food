@@ -5,9 +5,9 @@ import Link from 'next/link';
 
 const Banner = () => {
 	return (
-		<div id='home-section' className='bg-lightpink'>
+		<div id='trang-chu' className='bg-lightpink'>
 			<div className='mx-auto max-w-7xl pt-4 sm:pt-10 sm:pb-24 px-6'>
-				<div className='grid grid-cols-1 lg:grid-cols-12 space-x-1'>
+				<div className='grid grid-cols-1 lg:grid-cols-12 space-x-1 space-y-8'>
 					<div className='col-span-7 flex flex-col justify-center'>
 						<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
 							<h1 className='text-xl md:text-3xl font-semibold mb-2 text-lightgrey md:4px lg:text-start text-center'>
@@ -19,16 +19,16 @@ const Banner = () => {
 						</Fade>
 						<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
 							<p className='text-grey lg:text-lg font-normal mb-10 lg:text-start text-center'>
-								[Giới thiệu nhanh về trang web - đặc sản - du lịch]
+								[Giới thiệu nhanh về đặc sản - du lịch]
 							</p>
 						</Fade>
 						<Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
 							<div className='md:flex align-middle justify-center lg:justify-start'>
 								<button className='text-xl w-full md:w-auto font-medium rounded-full text-white py-4 px-5 bg-pink lg:px-10 mr-6 hover:bg-[#c25947]'>
-									<Link href='#cook-section'>Tìm hiểu ngay</Link>
+									<Link href='#dac-san'>Tìm hiểu ngay</Link>
 								</button>
 								{/* <button className='flex border w-full md:w-auto mt-5 md:mt-0 border-pink justify-center rounded-full text-xl font-medium items-center py-4 px-10 text-pink hover:text-white hover:bg-pink'>
-									<Link href='#about-section'>Explore now</Link>
+									<Link href='#dac-san'>Explore now</Link>
 								</button> */}
 							</div>
 						</Fade>

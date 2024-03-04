@@ -4,7 +4,7 @@ import { LockClosedIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 import Image from 'next/image';
 
-const Signin = () => {
+const Contact = () => {
 	let [isOpen, setIsOpen] = useState(false);
 
 	const closeModal = () => {
@@ -17,11 +17,11 @@ const Signin = () => {
 
 	return (
 		<>
-			<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
+			<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0'>
 				<div className='hidden md:block'>
 					<button
 						type='button'
-						className='flex justify-end text-lg font-medium bg-bgpink text-pink py-3 px-3 lg:px-6 navbutton rounded-full hover:text-white hover:bg-pink'
+						className='flex justify-end text-md font-medium bg-bgpink text-pink py-3 px-3 xl:px-6 navbutton rounded-full hover:text-white hover:bg-pink'
 						onClick={openModal}
 					>
 						Liên Hệ Ngay
@@ -60,20 +60,18 @@ const Signin = () => {
 											<div>
 												<div className='flex items-center justify-center'>
 													<Image src='/images/Logo/Sea-Logo.svg' alt='logo' width={46} height={46} />
-													<Link href='/' className='text-2xl font-semibold text-black ml-4'>
-														77 Food
-													</Link>
+													<p className='text-2xl font-semibold text-black ml-4'>Hải Sản Phơi Khô</p>
 												</div>
-												<h2 className='mt-10 text-center text-3xl font-bold tracking-tight text-lightgrey'>
-													Sign in to your account
-												</h2>
+												<h4 className='mt-10 text-center text-xl font-bold tracking-tight text-lightgrey'>
+													Vui lòng iên hệ với chúng tôi để biết thêm thông tin về các sản phẩm!
+												</h4>
 											</div>
 											<form className='mt-8 space-y-6' action='#' method='POST'>
 												<input type='hidden' name='remember' defaultValue='true' />
-												<div className='-space-y-px rounded-md shadow-sm'>
+												<div className='-space-y-px rounded-md shadow-sm flex flex-col gap-2'>
 													<div>
 														<label htmlFor='email-address' className='sr-only'>
-															Email address
+															Email của bạn
 														</label>
 														<input
 															id='email-address'
@@ -82,42 +80,32 @@ const Signin = () => {
 															autoComplete='email'
 															required
 															className='relative block w-full appearance-none rounded-none rounded-t-md border border-lightgrey border-opacity-40 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-															placeholder='Email address'
+															placeholder='Nhập email của bạn'
 														/>
 													</div>
 													<div>
-														<label htmlFor='password' className='sr-only'>
-															Password
+														<label htmlFor='phone-number' className='sr-only'>
+															Số điện thoại
 														</label>
 														<input
-															id='password'
-															name='password'
-															type='password'
-															autoComplete='current-password'
+															id='phone-number'
+															name='phone-number'
+															type='text'
 															required
-															className='relative block w-full appearance-none rounded-none rounded-b-md border border-lightgrey border-opacity-40 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-															placeholder='Password'
+															className='relative block w-full appearance-none rounded-none border border-lightgrey border-opacity-40 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
+															placeholder='Nhập Số điện thoại của bạn'
 														/>
 													</div>
-												</div>
-
-												<div className='flex items-center justify-between'>
-													<div className='flex items-center'>
-														<input
-															id='remember-me'
-															name='remember-me'
-															type='checkbox'
-															className='h-4 w-4 rounded border-lightgrey text-indigo-600 focus:ring-indigo-500'
-														/>
-														<label htmlFor='remember-me' className='ml-2 block text-sm text-gray-900'>
-															Remember me
+													<div>
+														<label htmlFor='message' className='sr-only'>
+															Lời nhắn
 														</label>
-													</div>
-
-													<div className='text-sm'>
-														<a href='#' className='font-medium text-indigo-600 hover:text-indigo-500'>
-															Forgot your password?
-														</a>
+														<textarea
+															id='message'
+															name='message'
+															className='relative block w-full appearance-none rounded-none rounded-b-md border border-lightgrey border-opacity-40 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
+															placeholder='Nhập lời nhắn'
+														/>
 													</div>
 												</div>
 
@@ -126,13 +114,7 @@ const Signin = () => {
 														type='submit'
 														className='group relative flex w-full justify-center rounded-md border border-transparent bg-pink py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
 													>
-														<span className='absolute inset-y-0 left-0 flex items-center pl-3'>
-															<LockClosedIcon
-																className='h-5 w-5 text-indigo-500 group-hover:text-indigo-400'
-																aria-hidden='true'
-															/>
-														</span>
-														Sign in
+														Gửi thông tin
 													</button>
 												</div>
 											</form>
@@ -158,4 +140,4 @@ const Signin = () => {
 	);
 };
 
-export default Signin;
+export default Contact;

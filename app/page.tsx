@@ -1,21 +1,19 @@
-import Banner from './components/Banner/index';
-import Features from './components/Work/index';
-import Cook from './components/Cook/index';
-import Expert from './components/Expert/index';
-import Gallery from './components/Gallery/index';
+import Banner from './components/Banner';
+import Details from './components/Details';
+import AboutUs from './components/AboutUs';
+import Gallery from './components/Gallery';
 import Newsletter from './components/Newsletter/Newsletter';
-
-
+import Features from './components/Features';
 
 export default function Home() {
-  return (
-    <main>
-      <Banner />
-      <Features />
-      <Cook />
-      <Expert />
-      <Gallery />
-      <Newsletter />
-    </main>
-  )
+	return (
+		<main>
+			<Banner />
+			<Features />
+			<Details />
+			<Gallery />
+			<AboutUs />
+			{/* <Newsletter /> */}
+		</main>
+	);
 }
