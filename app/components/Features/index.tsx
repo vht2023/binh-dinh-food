@@ -30,7 +30,7 @@ const cardData: cardDataType[] = [
 	{
 		imgSrc: '/images/Features/cha-ram-tom-dat.jfif',
 		heading: 'Chả ram tôm đất',
-		subheading: 'Chiên hoặc nướng, làm gỏi, làm đồ nhắm',
+		subheading: 'Hương vị đất võ, chiên giòn thơm ngon',
 		link: '#cha-ram-tom-dat',
 		description: 'Chả ram tôm đất đặc sản Bình Định',
 	},

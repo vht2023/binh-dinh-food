@@ -9,10 +9,10 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-	{ name: 'Home', href: '#trang-chu', current: false },
-	{ name: 'About us', href: '#dac-san', current: false },
-	{ name: 'Gallery', href: '#gallery-section', current: false },
-	{ name: 'Recipe', href: '#cook-section', current: false },
+	{ name: 'Trang chủ', href: '#trang-chu', current: false },
+	{ name: 'Sản phẩm', href: '#dac-san', current: false },
+	{ name: 'Hình ảnh', href: '#hinh-anh-hai-san-phoi-kho', current: false },
+	{ name: 'Về chúng tôi', href: '#ve-chung-toi', current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -29,22 +29,19 @@ const Data = () => {
 							<Link
 								key={item.name}
 								href={item.href}
-								className={classNames(
-									item.current ? 'bg-gray-900 text-purple' : 'text-black hover:bg-gray-700 hover:text-purple',
-									'block  py-2 rounded-md text-base font-medium'
-								)}
+								className={classNames(item.current ? 'bg-gray-900 text-purple' : 'text-black hover:bg-gray-700 hover:text-purple', 'block  py-2 rounded-md text-base font-medium')}
 								aria-current={item.current ? 'page' : undefined}
 							>
 								{item.name}
 							</Link>
 						))}
-						<div className='mt-4'></div>
-						<button className='flex justify-center text-base w-full font-medium rounded-full bg-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white'>
-							Sign in
-						</button>
-						<button className='flex justify-center text-base w-full font-medium rounded-full bg-transparent border border-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white hover:bg-pink'>
-							Contact us
-						</button>
+						{/* <button className='flex justify-center text-base w-full font-medium rounded-full bg-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white'>Sign in</button> */}
+						<a
+							href='tel:0986078827'
+							className='mt-12 flex justify-center text-base w-full font-medium rounded-full bg-transparent border border-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white hover:bg-pink'
+						>
+							Liên hệ ngay
+						</a>
 
 						{/* <ContactUsForm /> */}
 					</div>
