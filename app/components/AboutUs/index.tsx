@@ -14,33 +14,23 @@ interface DataType {
 
 const postData: DataType[] = [
 	{
-		profession: 'Senior Chef',
-		name: 'Shoo Thar Mien',
-		imgSrc: '/images/Expert/boyone.svg',
-	},
-	{
-		profession: 'Junior Chef',
-		name: 'Shoo Thar Mien',
-		imgSrc: '/images/Expert/girl.png',
-	},
-	{
-		profession: 'Junior Chef',
-		name: 'Shoo Thar Mien',
+		profession: 'Gym chúa',
+		name: 'Huỳnh Minh Tho',
 		imgSrc: '/images/Expert/boytwo.svg',
 	},
 	{
-		profession: 'Junior Chef',
-		name: 'Shoo Thar Mien',
-		imgSrc: '/images/Expert/girl.png',
+		profession: 'Culi',
+		name: 'Võ Huỳnh Thiên',
+		imgSrc: '/images/Expert/boyone.svg',
 	},
 	{
-		profession: 'Junior Chef',
-		name: 'Shoo Thar Mien',
-		imgSrc: '/images/Expert/girl.png',
+		profession: 'Bán mắm dạo',
+		name: 'Nguyễn Đức Cảnh',
+		imgSrc: '/images/Expert/boytwo.svg',
 	},
 	{
-		profession: 'Junior Chef',
-		name: 'Shoo Thar Mien',
+		profession: 'Chủ trại mắm',
+		name: 'Thùy Vy',
 		imgSrc: '/images/Expert/girl.png',
 	},
 ];

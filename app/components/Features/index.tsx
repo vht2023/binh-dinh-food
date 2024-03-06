@@ -9,6 +9,7 @@ interface cardDataType {
 	heading: string;
 	subheading: string;
 	link: string;
+	description: string;
 }
 
 const cardData: cardDataType[] = [
@@ -17,25 +18,41 @@ const cardData: cardDataType[] = [
 		heading: 'Khô Mực',
 		subheading: 'Nướng cùng với bia, món nhậu, làm quà tặng',
 		link: '#kho-muc',
+		description: 'Khô mực ngon',
 	},
 	{
 		imgSrc: '/images/Features/ca-com-kho.png',
 		heading: 'Khô Cá Cơm',
 		subheading: 'Rim nước mắm tỏi ớt, món ăn ngon với cơm',
 		link: '#kho-ca-com',
+		description: 'Khô cá cơm ngon',
 	},
 	{
-		imgSrc: '/images/Features/kho-ca-du.jpg',
-		heading: 'Khô Cá Đù',
+		imgSrc: '/images/Features/cha-ram-tom-dat.jfif',
+		heading: 'Chả ram tôm đất',
 		subheading: 'Chiên hoặc nướng, làm gỏi, làm đồ nhắm',
-		link: '#kho-ca-du',
+		link: '#cha-ram-tom-dat',
+		description: 'Chả ram tôm đất đặc sản Bình Định',
 	},
 	{
-		imgSrc: '/images/Features/tom-kho.jpg',
-		heading: 'Tôm Khô',
-		subheading: 'Làm gỏi, nấu canh, kho quẹt, làm món nhậu',
-		link: '#tom-kho',
+		imgSrc: '/images/Features/nuoc-mam.jfif',
+		heading: 'Nước mắm nhỉ truyền thống',
+		subheading: 'Nước mắm nhỉ cá cơm nguyên chất truyền thống',
+		link: '#nuoc-mam-nhi',
+		description: 'Nước mắm nhỉ truyền thống Bình Định',
 	},
+	// {
+	// 	imgSrc: '/images/Features/kho-ca-du.jpg',
+	// 	heading: 'Khô Cá Đù',
+	// 	subheading: 'Chiên hoặc nướng, làm gỏi, làm đồ nhắm',
+	// 	link: '#kho-ca-du',
+	// },
+	// {
+	// 	imgSrc: '/images/Features/tom-kho.jpg',
+	// 	heading: 'Tôm Khô',
+	// 	subheading: 'Làm gỏi, nấu canh, kho quẹt, làm món nhậu',
+	// 	link: '#tom-kho',
+	// },
 ];
 
 const Features = () => {
@@ -54,16 +71,10 @@ const Features = () => {
 				<div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-y-40 gap-x-5 mt-40'>
 					<Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
 						{cardData.map((item, i) => (
-							<div className='card-b p-8 relative rounded-3xl' key={i}>
+							<div className='card-b py-8 px-4 relative rounded-3xl' key={i}>
 								<div className='work-img-bg rounded-full flex justify-center absolute top-[-35%] w-full left-0'>
 									<div>
-										<Image
-											src={item.imgSrc}
-											alt={item.imgSrc}
-											width={160}
-											height={160}
-											className='rounded-full h-[160px] shadow-md'
-										/>
+										<Image src={item.imgSrc} alt={item.description} width={160} height={160} className='rounded-full h-[160px] shadow-md' />
 									</div>
 								</div>
 								<h3 className='text-2xl text-black font-semibold text-center mt-16'>{item.heading}</h3>
