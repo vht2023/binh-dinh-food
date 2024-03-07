@@ -1,34 +1,77 @@
 import { Dialog, Transition } from '@headlessui/react';
-import { Fragment, useState } from 'react';
-import { LockClosedIcon } from '@heroicons/react/20/solid';
-import Link from 'next/link';
+import { Fragment, useEffect, useState } from 'react';
 import Image from 'next/image';
+import emailjs from '@emailjs/browser';
 
-const Contact = () => {
-	let [isOpen, setIsOpen] = useState(false);
+type Error = {
+	email: { isError: boolean; message: string };
+	phone: { isError: boolean; message: string };
+};
+
+const Contact = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
+	const [email, setEmail] = useState('');
+	const [name, setName] = useState('');
+	const [phone, setPhone] = useState('');
+	const [message, setMessage] = useState('');
+	const [error, setError] = useState<Error>({ email: { isError: false, message: '' }, phone: { isError: false, message: '' } });
 
 	const closeModal = () => {
 		setIsOpen(false);
 	};
 
-	const openModal = () => {
-		setIsOpen(true);
+	const reset = () => {
+		setEmail('');
+		setName('');
+		setPhone('');
+		setMessage('');
+		setError({ email: { isError: false, message: '' }, phone: { isError: false, message: '' } });
 	};
+
+	const handleSubmit = () => {
+		const regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+		const regexPhone = /(03|08|09)+([0-9]{8})\b/;
+		let canSubmit = true;
+
+		if (!email) {
+			setError((prev) => ({ ...prev, email: { isError: true, message: 'Vui lòng nhập Email của bạn!' } }));
+			canSubmit = false;
+		} else if (!regexEmail.test(email)) {
+			setError((prev) => ({ ...prev, email: { isError: true, message: 'Vui lòng nhập đúng Email của bạn!' } }));
+			canSubmit = false;
+		} else {
+			setError((prev) => ({ ...prev, email: { isError: false, message: '' } }));
+			canSubmit = true;
+		}
+
+		if (!phone) {
+			setError((prev) => ({ ...prev, phone: { isError: true, message: 'Vui lòng nhập SĐT của bạn!' } }));
+			canSubmit = false;
+		} else if (!regexPhone.test(phone)) {
+			setError((prev) => ({ ...prev, phone: { isError: true, message: 'Vui lòng nhập đúng SĐT của bạn!' } }));
+			canSubmit = false;
+		} else {
+			setError((prev) => ({ ...prev, phone: { isError: false, message: '' } }));
+			canSubmit = true;
+		}
+
+		if (canSubmit) {
+			emailjs.send('service_r7r0wpy', 'template_w4tc9c9', { email, name, phone, message }, 'l5MT3ZE5YgFTXD7Dv').then(
+				(result) => {
+					closeModal();
+				},
+				(error) => {
+					console.log(error.text);
+				}
+			);
+		}
+	};
+
+	useEffect(() => {
+		reset();
+	}, [isOpen]);
 
 	return (
 		<>
-			<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0'>
-				<div className='hidden md:block'>
-					<button
-						type='button'
-						className='flex justify-end text-md font-medium bg-bgpink text-pink py-3 px-3 xl:px-6 navbutton rounded-full hover:text-white hover:bg-pink'
-						onClick={openModal}
-					>
-						Liên Hệ Ngay
-					</button>
-				</div>
-			</div>
-
 			<Transition appear show={isOpen} as={Fragment}>
 				<Dialog as='div' className='relative z-10' onClose={closeModal}>
 					<Transition.Child
@@ -63,11 +106,10 @@ const Contact = () => {
 													<p className='text-2xl font-semibold text-black ml-4'>Hải Sản Phơi Khô</p>
 												</div>
 												<h4 className='mt-10 text-center text-xl font-bold tracking-tight text-lightgrey'>
-													Vui lòng iên hệ với chúng tôi để biết thêm thông tin về các sản phẩm!
+													Vui lòng liên hệ với chúng tôi để biết thêm thông tin về các sản phẩm!
 												</h4>
 											</div>
-											<form className='mt-8 space-y-6' action='#' method='POST'>
-												<input type='hidden' name='remember' defaultValue='true' />
+											<div className='mt-8 space-y-6'>
 												<div className='-space-y-px rounded-md shadow-sm flex flex-col gap-2'>
 													<div>
 														<label htmlFor='email-address' className='sr-only'>
@@ -81,6 +123,22 @@ const Contact = () => {
 															required
 															className='relative block w-full appearance-none rounded-none rounded-t-md border border-lightgrey border-opacity-40 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
 															placeholder='Nhập email của bạn'
+															value={email}
+															onChange={(e) => setEmail(e.target.value)}
+														/>
+													</div>
+													<div>
+														<label htmlFor='name' className='sr-only'>
+															Tên của bạn
+														</label>
+														<input
+															id='name'
+															name='name'
+															type='text'
+															className='relative block w-full appearance-none rounded-none border border-lightgrey border-opacity-40 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
+															placeholder='Nhập tên của bạn'
+															value={name}
+															onChange={(e) => setName(e.target.value)}
 														/>
 													</div>
 													<div>
@@ -93,7 +151,9 @@ const Contact = () => {
 															type='text'
 															required
 															className='relative block w-full appearance-none rounded-none border border-lightgrey border-opacity-40 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
-															placeholder='Nhập Số điện thoại của bạn'
+															placeholder='Nhập số điện thoại của bạn'
+															value={phone}
+															onChange={(e) => setPhone(e.target.value)}
 														/>
 													</div>
 													<div>
@@ -105,30 +165,32 @@ const Contact = () => {
 															name='message'
 															className='relative block w-full appearance-none rounded-none rounded-b-md border border-lightgrey border-opacity-40 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm'
 															placeholder='Nhập lời nhắn'
+															value={message}
+															onChange={(e) => setMessage(e.target.value)}
 														/>
 													</div>
 												</div>
 
 												<div>
 													<button
-														type='submit'
+														onClick={handleSubmit}
 														className='group relative flex w-full justify-center rounded-md border border-transparent bg-pink py-2 px-4 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2'
 													>
 														Gửi thông tin
 													</button>
 												</div>
-											</form>
-										</div>
-									</div>
 
-									<div className='mt-4 flex justify-end'>
-										<button
-											type='button'
-											className='inline-flex justify-center rounded-md border border-transparent bg-blue-100 px-4 py-2 text-sm font-medium text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2'
-											onClick={closeModal}
-										>
-											Got it, thanks!
-										</button>
+												<div>
+													{error.email.isError && <div className='text-error text-xs'>{error.email.message}</div>}
+													{error.phone.isError && <div className='text-error text-xs'>{error.phone.message}</div>}
+												</div>
+											</div>
+											<div className='mt-8 flex justify-end w-full items-center'>
+												<a className='text-sm font-medium hover:underline' href='tel:0986078827'>
+													Gọi ngay: 098 607 8827
+												</a>
+											</div>
+										</div>
 									</div>
 								</Dialog.Panel>
 							</Transition.Child>

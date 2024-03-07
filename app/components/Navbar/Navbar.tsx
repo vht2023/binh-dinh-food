@@ -26,6 +26,7 @@ function classNames(...classes: string[]) {
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = React.useState(false);
+	const [isOpenContactForm, setIsOpenContactForm] = React.useState(false);
 
 	return (
 		<Disclosure as='nav' className='navbar'>
@@ -55,10 +56,7 @@ const Navbar = () => {
 										<Link
 											key={item.href}
 											href={item.href}
-											className={classNames(
-												item.current ? 'bg-black' : 'hover:opacity-100',
-												'rounded-md lg:text-lg font-normal hover:text-black opacity-50 space-links'
-											)}
+											className={classNames(item.current ? 'bg-black' : 'hover:opacity-100', 'rounded-md lg:text-lg font-normal hover:text-black opacity-50 space-links')}
 											aria-current={item.href ? 'page' : undefined}
 										>
 											{item.name}
@@ -73,8 +71,18 @@ const Navbar = () => {
 										098 607 8827
 									</a>
 								</div>
-								{/* <button className='flex justify-end text-xl font-medium bg-bgpink text-pink py-4 px-4 lg:px-8 navbutton rounded-full hover:text-black'>Sign in</button> */}
-								<ContactDialog />
+								<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0'>
+									<div className='hidden md:block'>
+										<button
+											type='button'
+											className='flex justify-end text-md font-medium bg-bgpink text-pink py-3 px-3 xl:px-6 navbutton rounded-full hover:text-white hover:bg-pink'
+											onClick={() => setIsOpenContactForm(true)}
+										>
+											Liên Hệ Ngay
+										</button>
+									</div>
+								</div>
+								<ContactDialog isOpen={isOpenContactForm} setIsOpen={setIsOpenContactForm} />
 							</div>
 						</div>
 

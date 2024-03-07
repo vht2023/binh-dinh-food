@@ -8,19 +8,19 @@ const Details = () => {
 		<div id='kho-muc'>
 			<div className='relative' id='kho-muc'>
 				<div className='mx-auto max-w-7xl lg:pt-10 pb-24 px-6'>
-					<div className='grid grid-cols-1 lg:grid-cols-12 sm:space-x-5'>
+					<div className='grid grid-cols-1 lg:grid-cols-12 lg:space-x-5'>
 						<div className='col-span-6 flex justify-start'>
 							<Image src='/images/Details/kho-muc-1.jpeg' alt='Khô mực ngon' width={636} height={808} />
 						</div>
 
 						<div className='col-span-6 flex flex-col justify-start'>
-							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={200} cascade damping={1e-1} triggerOnce={true}>
 								<h2 className='text-pink text-lg font-bold mb-3 mt-3 ls-51 uppercase text-start'>KHÔ MỰC</h2>
 							</Fade>
-							<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
 								<h3 className='text-3xl lg:text-4xl font-semibold text-black text-start'>Khô mực thơm ngọt - Thích hợp làm quà</h3>
 							</Fade>
-							<Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={600} cascade damping={1e-1} triggerOnce={true}>
 								<p className='text-grey md:text-lg font-normal text-start mt-4'>
 									<b>Hải sản phơi khô</b> cung cấp sỉ và lẻ mực khô các loại, được tuyển chọn từ những con mực ngon nhất với tiêu chí tươi, ngon, sạch.
 								</p>
@@ -54,18 +54,18 @@ const Details = () => {
 			</div>
 			<div className='relative' id='kho-ca-com'>
 				<div className='mx-auto max-w-7xl lg:pt-10 pb-24 px-6'>
-					<div className='grid grid-cols-1 lg:grid-cols-12 sm:space-x-5'>
-						<div className='sm:hidden col-span-6 flex justify-start mt-3'>
+					<div className='grid grid-cols-1 lg:grid-cols-12 lg:space-x-5'>
+						<div className='lg:hidden col-span-6 flex justify-start mt-3'>
 							<Image src='/images/Details/kho-ca-com-1.jpg' alt='Khô cá cơm một nắng ngon' width={636} height={808} className='object-center' />
 						</div>
 						<div className='col-span-6 flex flex-col justify-start'>
-							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={200} cascade damping={1e-1} triggerOnce={true}>
 								<h2 className='text-pink text-lg font-bold mb-3 ls-51 uppercase text-start mt-3'>KHÔ CÁ CƠM</h2>
 							</Fade>
-							<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
 								<h3 className='text-3xl lg:text-4xl font-semibold text-black text-start'>Khô cá cơm - Cá cơm rim với mắm và tỏi ớt</h3>
 							</Fade>
-							<Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={600} cascade damping={1e-1} triggerOnce={true}>
 								<p className='text-grey md:text-lg font-normal text-start mt-4'>
 									<b>Cá cơm</b> mới đánh bắt lên còn sống người ta lựa những con to, sau đó bỏ đầu, xẻ cá ra làm sạch màn ruột, bỏ xương cho kỹ, rửa sạch bằng nước biển, sau đó rửa
 									lại lần nữa bằng nước lạnh có pha chút rượu, rồi rửa sơ qua bằng nước lạnh lần nữa, để ráo rồi xếp lần giàn phơi dưới nắng trời to, chiều tắt nắng thu hoạch cá
@@ -90,7 +90,7 @@ const Details = () => {
 								</button>
 							</Fade>
 						</div>
-						<div className='col-span-6 hidden sm:flex justify-start mt-3'>
+						<div className='col-span-6 hidden lg:flex justify-start mt-3'>
 							<Image src='/images/Details/kho-ca-com-1.jpg' alt='Khô cá cơm một nắng ngon' width={636} height={808} className='object-center' />
 						</div>
 					</div>
@@ -98,19 +98,19 @@ const Details = () => {
 			</div>
 			<div className='relative' id='cha-ram-tom'>
 				<div className='mx-auto max-w-7xl lg:pt-10 pb-24 px-6'>
-					<div className='grid grid-cols-1 lg:grid-cols-12 sm:space-x-5'>
+					<div className='grid grid-cols-1 lg:grid-cols-12 lg:space-x-5'>
 						<div className='col-span-6 flex justify-start mt-6 md:mt-0'>
-							<Image src='/images/Details/cha-ram-tom-1.jfif' alt='Chả ram tôm đất Bình Định ngon' width={636} height={808} />
+							<Image src='/images/Details/cha-ram-tom-3.jpg' alt='Chả ram tôm đất Bình Định ngon' width={636} height={808} />
 						</div>
 
 						<div className='col-span-6 flex flex-col justify-start'>
-							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={200} cascade damping={1e-1} triggerOnce={true}>
 								<h2 className='text-pink text-lg font-bold mb-3 ls-51 uppercase text-start'>CHẢ RAM TÔM ĐẤT</h2>
 							</Fade>
-							<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
 								<h3 className='text-3xl lg:text-4xl font-semibold text-black text-start'>Chả ram tôm đất - Đặc sản xứ nẫu Bình Định</h3>
 							</Fade>
-							<Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={600} cascade damping={1e-1} triggerOnce={true}>
 								<p className='text-grey md:text-lg font-normal text-start mt-4'>
 									<b>Chả ram tôm đất Bình Định</b> là đặc sản vô cùng thơm ngon của {`"mảnh đất võ"`}. Chả được làm từ hai loại nguyên liệu chính là chả giò xay nhuyễn và tôm đất.
 									Khi ăn vừa có vị thơm ngon đặc trưng của hải sản, vừa có vị ngậy đến từ thịt heo. Đây được coi như là một món quà mà bất cứ thực khách nào khi đến tham quan vùng
@@ -139,20 +139,20 @@ const Details = () => {
 			</div>
 			<div className='relative' id='nuoc-mam-nhi'>
 				<div className='mx-auto max-w-7xl lg:pt-10 pb-24 px-6'>
-					<div className='grid grid-cols-1 lg:grid-cols-12 sm:space-x-5'>
-						<div className='sm:hidden col-span-6 flex justify-start mt-3'>
+					<div className='grid grid-cols-1 lg:grid-cols-12 lg:space-x-5'>
+						<div className='lg:hidden col-span-6 flex justify-start mt-3'>
 							<Image src='/images/Details/nuoc-mam-1.jfif' alt='Nước mắm nhỉ truyền thống Bình Định ngon' width={636} height={808} className='object-center' />
 						</div>
 						<div className='col-span-6 flex flex-col justify-start'>
-							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={200} cascade damping={1e-1} triggerOnce={true}>
 								<h2 className='text-pink text-lg font-bold mb-3 ls-51 uppercase text-start mt-3'>Nước mắm nhỉ</h2>
 							</Fade>
-							<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
 								<h3 className='text-3xl lg:text-4xl font-semibold text-black text-start'>
 									Nước mắm nhỉ truyền thống Bình Định - Gia vị không thể thiếu trong mọi bữa ăn của vùng đất biển
 								</h3>
 							</Fade>
-							<Fade direction={'up'} delay={1000} cascade damping={1e-1} triggerOnce={true}>
+							<Fade direction={'up'} delay={600} cascade damping={1e-1} triggerOnce={true}>
 								<p className='text-grey md:text-lg font-normal text-start mt-4'>
 									Thủ phủ làng nghề làm nước mắm truyền thống ở Hoài Nhơn, Bình Định. Làng nghề nước mắm ngày càng được nhân rộng ra Tam Quan Bắc, Tam Quan Nam, Hoài Thanh, Hoài
 									Hương… Tất cả được gói gọn lại thành cái tên quen thuộc <b>“Nước mắm Tam Quan”</b>.
@@ -182,7 +182,7 @@ const Details = () => {
 								</button>
 							</Fade>
 						</div>
-						<div className='col-span-6 hidden sm:flex justify-start mt-3'>
+						<div className='col-span-6 hidden lg:flex justify-start mt-3'>
 							<Image src='/images/Details/nuoc-mam-1.jfif' alt='Nước mắm nhỉ truyền thống Bình Định ngon' width={636} height={808} className='object-center' />
 						</div>
 					</div>

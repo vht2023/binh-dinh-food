@@ -40,11 +40,6 @@ const ContactUs = () => {
 	return (
 		<>
 			<div className=' inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto md:ml-6 sm:pr-0'>
-				{/* <div className='lg:hidden'>
-                    <button type="button" className='bg-navyblue w-full hover:text-white text-white border border-purple font-medium py-2 px-4 rounded' onClick={openModal}>
-                        Contact Us
-                    </button>
-                </div> */}
 				<div className='hidden lg:block'>
 					<button
 						type='button'
@@ -88,15 +83,10 @@ const ContactUs = () => {
 												Desgy Solutions
 											</Link>
 										</div>
-										<p className='mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl'>
-											Contact us now? Want to send us a feedback?
-										</p>
+										<p className='mb-8 lg:mb-16 mt-8 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl'>Contact us now? Want to send us a feedback?</p>
 										<form action='#' className='space-y-8' onSubmit={handleSubmit}>
 											<div>
-												<label
-													htmlFor='text'
-													className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
-												>
+												<label htmlFor='text' className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
 													Your Name
 												</label>
 												<input
@@ -112,10 +102,7 @@ const ContactUs = () => {
 												/>
 											</div>
 											<div>
-												<label
-													htmlFor='email'
-													className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'
-												>
+												<label htmlFor='email' className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300'>
 													Your email
 												</label>
 												<input
@@ -131,10 +118,7 @@ const ContactUs = () => {
 												/>
 											</div>
 											<div className='sm:col-span-2'>
-												<label
-													htmlFor='message'
-													className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'
-												>
+												<label htmlFor='message' className='block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400'>
 													Your message
 												</label>
 												<textarea

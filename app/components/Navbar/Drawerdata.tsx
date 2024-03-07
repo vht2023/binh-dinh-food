@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
-// import ContactUsForm from './Contactus';
+import ContactDialog from './Contact';
 
 interface NavigationItem {
 	name: string;
@@ -20,6 +20,7 @@ function classNames(...classes: string[]) {
 }
 
 const Data = () => {
+	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<div className='rounded-md max-w-sm w-full mx-auto'>
 			<div className='flex-1 space-y-4 py-1'>
@@ -35,18 +36,18 @@ const Data = () => {
 								{item.name}
 							</Link>
 						))}
-						{/* <button className='flex justify-center text-base w-full font-medium rounded-full bg-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white'>Sign in</button> */}
-						<a
-							href='tel:0986078827'
-							className='mt-12 flex justify-center text-base w-full font-medium rounded-full bg-transparent border border-bgpink text-pink py-3 px-4 lg:px-8 navbutton hover:text-white hover:bg-pink'
+					</div>
+					<div className='space-y-4 px-5'>
+						<button
+							className='w-full text-md font-medium bg-bgpink text-pink py-3 px-3 xl:px-6 navbutton rounded-full hover:text-white hover:bg-pink'
+							onClick={() => setIsOpen(true)}
 						>
-							Liên hệ ngay
-						</a>
-
-						{/* <ContactUsForm /> */}
+							Liên Hệ Ngay
+						</button>
 					</div>
 				</div>
 			</div>
+			<ContactDialog isOpen={isOpen} setIsOpen={setIsOpen} />
 		</div>
 	);
 };
