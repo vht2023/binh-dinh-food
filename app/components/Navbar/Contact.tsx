@@ -102,7 +102,7 @@ const Contact = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: React.Disp
 										<div className='w-full max-w-md space-y-8'>
 											<div>
 												<div className='flex items-center justify-center'>
-													<Image src='/images/Logo/Sea-Logo.svg' alt='logo' width={46} height={46} />
+													<Image src='/images/Logo/logo.png' alt='logo' width={60} height={60} />
 													<p className='text-2xl font-semibold text-black ml-4'>Hải Sản Phơi Khô</p>
 												</div>
 												<h4 className='mt-10 text-center text-xl font-bold tracking-tight text-lightgrey'>
@@ -186,8 +186,8 @@ const Contact = ({ isOpen, setIsOpen }: { isOpen: boolean; setIsOpen: React.Disp
 												</div>
 											</div>
 											<div className='mt-8 flex justify-end w-full items-center'>
-												<a className='text-sm font-medium hover:underline' href='tel:0986078827'>
-													Gọi ngay: 098 607 8827
+												<a className='text-sm font-medium hover:underline' href='tel:0931888357'>
+													Gọi ngay: 0931 888 357
 												</a>
 											</div>
 										</div>

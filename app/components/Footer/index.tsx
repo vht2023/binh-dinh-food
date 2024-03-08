@@ -57,14 +57,12 @@ const Footer = () => {
 
 				<div className='sm:col-span-6 lg:col-span-5'>
 					<div className='flex flex-shrink-0 items-center border-right'>
-						<Image src='/images/Logo/Sea-Logo.svg' alt='logo' width={56} height={56} />
+						<Image src='/images/Logo/logo.png' alt='logo' width={60} height={60} />
 						<Link href='/' className='text-2xl font-semibold text-black ml-4'>
 							Hải Sản Phơi Khô
 						</Link>
 					</div>
-					<h3 className='text-textbl text-xs font-medium mt-8 mb-4 lg:mb-8'>
-						Vui lòng truy cập vào bên dưới để chúng tôi cung cấp thêm thông tin chi tiết về sản phẩm
-					</h3>
+					<h3 className='text-textbl text-xs font-medium mt-8 mb-4 lg:mb-8'>Vui lòng truy cập vào bên dưới để chúng tôi cung cấp thêm thông tin chi tiết về sản phẩm</h3>
 					<div className='flex gap-4'>
 						{socialLinks.map((items, i) => (
 							<Link href={items.link} key={i} target='blank'>

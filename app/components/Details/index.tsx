@@ -45,7 +45,7 @@ const Details = () => {
 								</p>
 
 								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4'>
-									<a href='tel:0986078827'>Liên hệ đặt mua ngay</a>
+									<a href='tel:0931888357'>Liên hệ đặt mua ngay</a>
 								</button>
 							</Fade>
 						</div>
@@ -86,7 +86,7 @@ const Details = () => {
 								</p>
 
 								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4'>
-									<a href='tel:0986078827'>Liên hệ đặt mua ngay</a>
+									<a href='tel:0931888357'>Liên hệ đặt mua ngay</a>
 								</button>
 							</Fade>
 						</div>
@@ -130,7 +130,7 @@ const Details = () => {
 								</p>
 
 								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4'>
-									<a href='tel:0986078827'>Liên hệ đặt mua ngay</a>
+									<a href='tel:0931888357'>Liên hệ đặt mua ngay</a>
 								</button>
 							</Fade>
 						</div>
@@ -178,7 +178,7 @@ const Details = () => {
 								</p>
 
 								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4'>
-									<a href='tel:0986078827'>Liên hệ đặt mua ngay</a>
+									<a href='tel:0931888357'>Liên hệ đặt mua ngay</a>
 								</button>
 							</Fade>
 						</div>

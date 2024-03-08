@@ -36,13 +36,13 @@ const Navbar = () => {
 						<div className='flex flex-1 items-center sm:justify-between lg:gap-3'>
 							{/* LOGO */}
 							<div className='flex sm:hidden flex-shrink-0 items-center border-right'>
-								<Image src='/images/Logo/Sea-Logo.svg' alt='Đặc sản Bình Định' width={36} height={36} />
-								<Link href='/' className='text-2xl font-bold text-black ml-4'>
+								<Image src='/images/Logo/logo.png' alt='Đặc sản Bình Định' width={64} height={64} />
+								<Link href='/' className='text-xl font-bold text-black ml-4'>
 									Hải Sản Phơi Khô
 								</Link>
 							</div>
 							<div className='hidden sm:flex flex-shrink-0 items-center border-right'>
-								<Image src='/images/Logo/Sea-Logo.svg' alt='Đặc sản Bình Định' width={52} height={52} />
+								<Image src='/images/Logo/logo.png' alt='Đặc sản Bình Định' width={92} height={92} />
 								<Link href='' className='text-2xl font-bold text-black ml-4'>
 									{/* 77&apos;s Food */}
 									Hải Sản Phơi Khô
@@ -67,8 +67,8 @@ const Navbar = () => {
 							<div className='gap-6 hidden lg:flex'>
 								<div className='flex items-center gap-2'>
 									<Image src={'/images/Navbar/phone.svg'} alt='SĐT đặt hàng' width={19} height={19} />
-									<a className='text-lg font-medium hover:underline' href='tel:0986078827'>
-										098 607 8827
+									<a className='text-lg font-medium hover:underline' href='tel:0931888357'>
+										0931 888 357
 									</a>
 								</div>
 								<div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:pr-0'>
