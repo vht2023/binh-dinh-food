@@ -50,9 +50,9 @@ const images = [
 
 const Gallery = () => {
 	return (
-		<div id='hinh-anh-hai-san-phoi-kho'>
-			<div className='mx-auto sm:max-w-7xl sm:py-4 lg:px-8 mt-20 md:pt-24'>
-				<div className='text-center'>
+		<div id='hinh-anh-hai-san-phoi-kho' className='mx-auto sm:max-w-7xl sm:py-4 md:px-8 py-20 md:py-32'>
+			<div className='w-full'>
+				<div className='text-center mx-auto px-5'>
 					<Fade direction={'up'} delay={200} cascade damping={1e-1} triggerOnce={true}>
 						<h3 className='text-pink text-xl font-semibold mb-3 ls-51 uppercase'>HÌNH ẢNH SẢN PHẨM</h3>
 					</Fade>

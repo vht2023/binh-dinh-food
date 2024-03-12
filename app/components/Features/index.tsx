@@ -57,14 +57,14 @@ const cardData: cardDataType[] = [
 
 const Features = () => {
 	return (
-		<div>
-			<div className='mx-auto max-w-7xl py-40 px-6' id='dac-san'>
+		<div id='dac-san' className='mx-auto max-w-7xl sm:py-40 py-36 px-6'>
+			<div className='w-full'>
 				<div className='text-center mb-14'>
 					<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
 						<h3 className='text-pink text-xl font-semibold mb-3 ls-51 uppercase'>ĐẶC SẢN</h3>
 					</Fade>
 					<Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
-						<p className='text-3xl lg:text-5xl font-semibold text-lightgrey'>Hải sản phơi khô - Chất lượng đặc biệt</p>
+						<p className='text-3xl lg:text-5xl font-semibold text-lightgrey'>Hải sản phơi khô - Chất lượng cao cấp</p>
 					</Fade>
 				</div>
 

@@ -25,7 +25,7 @@ const Data = () => {
 		<div className='rounded-md max-w-sm w-full mx-auto'>
 			<div className='flex-1 space-y-4 py-1'>
 				<div className='sm:block'>
-					<div className='space-y-1 px-5 pt-2 pb-3'>
+					<div className='space-y-1 px-5 pt-2 pb-6'>
 						{navigation.map((item) => (
 							<Link
 								key={item.name}
@@ -42,7 +42,7 @@ const Data = () => {
 							className='w-full text-md font-medium bg-bgpink text-pink py-3 px-3 xl:px-6 navbutton rounded-full hover:text-white hover:bg-pink'
 							onClick={() => setIsOpen(true)}
 						>
-							Liên Hệ Ngay
+							Liên hệ: 0931 888 357
 						</button>
 					</div>
 				</div>

@@ -23,7 +23,7 @@ const Drawer = ({ children, isOpen, setIsOpen }: DrawerProps) => {
 					(isOpen ? 'translate-x-0' : '-translate-x-full')
 				}
 			>
-				<article className='relative w-340px max-w-lg pb-10 flex flex-col space-y-6 h-full'>
+				<article className='relative w-340px max-w-lg pb-10 flex flex-col space-y-3 h-full'>
 					<header className='px-4 py-4 flex items-center justify-between'>
 						<div className='flex flex-shrink-0 items-center border-right'>
 							<Image src='/images/Logo/logo.png' alt='logo' width={36} height={36} />
