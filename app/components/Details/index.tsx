@@ -44,7 +44,7 @@ const Details = () => {
 									<b>Món phổ biến nhất với mực khô</b> đó là mực nướng, mực rim với nước mắm và tỏi ớt. Mực khô nướng vừa thơm, vừa ngon, lại luôn được dùng để tiếp khách.
 								</p>
 
-								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4'>
+								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4 capitalize transition-all hover:shadow-orange'>
 									<a href='tel:0931888357'>Liên hệ đặt mua ngay</a>
 								</button>
 							</Fade>
@@ -85,7 +85,7 @@ const Details = () => {
 									<b>Hải Sản Phơi Khô</b> và thưởng thức nhé.
 								</p>
 
-								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4'>
+								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4 capitalize transition-all hover:shadow-orange'>
 									<a href='tel:0931888357'>Liên hệ đặt mua ngay</a>
 								</button>
 							</Fade>
@@ -129,7 +129,7 @@ const Details = () => {
 									cuốn thịt, Chả ram ăn với bún, Chả ram cuốn rau xanh thơm ngon, Khai vị chả ram, Chả ram ăn cùng với cơm,...
 								</p>
 
-								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4'>
+								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4 capitalize transition-all hover:shadow-orange'>
 									<a href='tel:0931888357'>Liên hệ đặt mua ngay</a>
 								</button>
 							</Fade>
@@ -177,7 +177,7 @@ const Details = () => {
 									vị nêm nếm các món ăn.
 								</p>
 
-								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4'>
+								<button className='sm:text-xl text-lg w-full sm:w-auto font-medium rounded-full text-white sm:py-4 sm:px-5 px-4 py-2 bg-pink lg:px-10 mr-6 hover:bg-[#c25947] mt-4 capitalize transition-all hover:shadow-orange'>
 									<a href='tel:0931888357'>Liên hệ đặt mua ngay</a>
 								</button>
 							</Fade>

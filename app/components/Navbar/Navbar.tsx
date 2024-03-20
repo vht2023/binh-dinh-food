@@ -6,6 +6,8 @@ import Drawer from './Drawer';
 import Drawerdata from './Drawerdata';
 import ContactDialog from './Contact';
 import Image from 'next/image';
+import { Link as LinkScroll, scroller } from 'react-scroll';
+import { usePathname, useRouter } from 'next/navigation';
 
 interface NavigationItem {
 	name: string;
@@ -28,8 +30,16 @@ const Navbar = () => {
 	const [isOpen, setIsOpen] = React.useState(false);
 	const [isOpenContactForm, setIsOpenContactForm] = React.useState(false);
 
+	const renderMenuItems = () => {
+		return navigation.map((item, index) => (
+			<Link key={`${item.href}-${index}`} href={item.href} className='mx-2 cursor-pointer animation-hover inline-block relative text-black-500 hover:text-orange-500'>
+				{item.name}
+			</Link>
+		));
+	};
+
 	return (
-		<Disclosure as='nav' className='navbar'>
+		<Disclosure as='nav' className='navbar transition-all shadow-md'>
 			<>
 				<div className='mx-auto max-w-7xl p-3 lg:px-8'>
 					<div className='relative flex h-12 sm:h-20 items-center'>
@@ -51,23 +61,12 @@ const Navbar = () => {
 
 							{/* LINKS */}
 							<div className='hidden lg:flex items-center'>
-								<div className='flex justify-end items-center gap-6'>
-									{navigation.map((item) => (
-										<Link
-											key={item.href}
-											href={item.href}
-											className={classNames(item.current ? 'bg-black' : 'hover:opacity-100', 'rounded-md lg:text-lg font-normal hover:text-black opacity-50 space-links')}
-											aria-current={item.href ? 'page' : undefined}
-										>
-											{item.name}
-										</Link>
-									))}
-								</div>
+								<div className='flex justify-end items-center gap-6'>{renderMenuItems()}</div>
 							</div>
 							<div className='gap-6 hidden lg:flex'>
 								<div className='flex items-center gap-2'>
 									<Image src={'/images/Navbar/phone.svg'} alt='SĐT đặt hàng' width={19} height={19} />
-									<a className='text-lg font-medium hover:underline' href='tel:0931888357'>
+									<a className='animation-hover relative text-lg font-medium text-black capitalize tracking-wide hover:text-orange-500 transition-all' href='tel:0931888357'>
 										0931 888 357
 									</a>
 								</div>
@@ -75,7 +74,7 @@ const Navbar = () => {
 									<div className='hidden md:block'>
 										<button
 											type='button'
-											className='flex justify-end text-md font-medium bg-bgpink text-pink py-3 px-3 xl:px-6 navbutton rounded-full hover:text-white hover:bg-pink'
+											className='font-medium text-md tracking-wide py-2 px-5 sm:px-8 border border-orange-500 text-orange-500 bg-white outline-none rounded-l-full rounded-r-full capitalize hover:bg-orange-500 hover:text-white transition-all hover:shadow-orange'
 											onClick={() => setIsOpenContactForm(true)}
 										>
 											Liên Hệ Ngay
