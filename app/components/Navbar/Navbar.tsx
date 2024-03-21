@@ -19,7 +19,7 @@ const navigation: NavigationItem[] = [
 	{ name: 'Trang chủ', href: '#trang-chu', current: false },
 	{ name: 'Sản phẩm', href: '#dac-san', current: false },
 	{ name: 'Hình ảnh', href: '#hinh-anh-hai-san-phoi-kho', current: false },
-	{ name: 'Về chúng tôi', href: '#ve-chung-toi', current: false },
+	{ name: 'Đánh giá', href: '#danh-gia', current: false },
 ];
 
 function classNames(...classes: string[]) {

@@ -50,25 +50,24 @@ const images = [
 
 const Gallery = () => {
 	return (
-		<div id='hinh-anh-hai-san-phoi-kho' className='mx-auto sm:max-w-7xl sm:py-4 md:px-8 py-20 md:py-32'>
-			<div className='w-full'>
-				<div className='text-center mx-auto px-5'>
-					<Fade direction={'up'} delay={200} cascade damping={1e-1} triggerOnce={true}>
-						<h3 className='text-pink text-xl font-semibold mb-3 ls-51 uppercase'>HÌNH ẢNH SẢN PHẨM</h3>
-					</Fade>
-					{/* <Fade direction={'up'} delay={800} cascade damping={1e-1} triggerOnce={true}>
-						<h3 className='text-3xl lg:text-5xl font-semibold text-black'>Gallery of our cooked food.</h3>
-					</Fade> */}
-				</div>
-				<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
-					<div className='w-full p-5 pb-10 mx-auto mb-10 gap-5 columns-1 md:columns-3 space-y-5'>
-						{images.map((image) => (
-							<div className='overflow-hidden rounded-xl' key={image.src}>
-								<Image src={image.src} alt={image.alt} width={image.width} height={image.height} className='inner-img w-full' />
-							</div>
-						))}
+		<div id='hinh-anh-hai-san-phoi-kho'>
+			<div className='mx-auto sm:max-w-7xl sm:py-4 md:px-8 py-20 md:py-32'>
+				<div className='w-full'>
+					<div className='text-center mx-auto px-5 pb-10'>
+						<Fade direction={'up'} delay={200} cascade damping={1e-1} triggerOnce={true}>
+							<h3 className='text-pink text-xl font-semibold mb-3 ls-51 uppercase'>HÌNH ẢNH SẢN PHẨM</h3>
+						</Fade>
 					</div>
-				</Fade>
+					<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
+						<div className='w-full p-5 pb-10 mx-auto mb-10 gap-5 columns-1 md:columns-3 space-y-5'>
+							{images.map((image) => (
+								<div className='overflow-hidden rounded-xl' key={image.src}>
+									<Image src={image.src} alt={image.alt} width={image.width} height={image.height} className='inner-img w-full' />
+								</div>
+							))}
+						</div>
+					</Fade>
+				</div>
 			</div>
 		</div>
 	);
