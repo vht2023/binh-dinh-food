@@ -139,7 +139,9 @@ export default class MultipleItems extends Component {
 				<div className='mx-auto max-w-2xl lg:max-w-7xl lg:px-8'>
 					<div className='text-center pb-8'>
 						<Fade direction={'up'} delay={400} cascade damping={1e-1} triggerOnce={true}>
-							<h2 className='text-pink text-xl font-semibold mb-3 ls-51 uppercase'>Đánh Giá</h2>
+							<h2 className='text-pink text-xl font-semibold mb-3 ls-51 uppercase'>
+								Đánh Giá <div className='lg:break-inside-auto'>Từ Khách Hàng</div>
+							</h2>
 						</Fade>
 					</div>
 					<Slider {...settings}>
