@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://haisanphoikho.vercel.app/sitemap.xml
